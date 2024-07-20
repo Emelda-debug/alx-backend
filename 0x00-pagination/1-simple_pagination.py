@@ -9,10 +9,8 @@ import math
 from typing import List, Tuple
 
 
-def index_range(page: int, page_size: int) -> Tuple[int, int]:
-    """Retrieves the index range from a given page and page size """
+index_range = __import__('0-simple_helper_function').index_range
 
-    return ((page - 1) * page_size, ((page - 1) * page_size) + page_size)
 
 
 class Server:
@@ -33,7 +31,7 @@ class Server:
         return self.__dataset
 
     def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
-        """retrieves page of data """
+        """retrieves content in page of data """
         assert isinstance(page, type(page_size)) == int
         assert page > 0 and page_size > 0
         start, end = index_range(page, page_size)

@@ -15,9 +15,9 @@ import math
 from typing import Dict, List, Tuple
 
 
-def index_range(page: int, page_size: int) -> Tuple[int, int]:
-    """Retrieves the index range from given page and page size."""
-
+def index_range(page: int, page_size: int) -> tuple[int, int]:
+    """function to return a tuple of size two containing
+    a start index and an end index """
     return page * page_size - page_size, page * page_size
 
 
