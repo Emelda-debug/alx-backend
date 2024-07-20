@@ -9,5 +9,6 @@ from typing import Tuple
 
 
 def index_range(page: int, page_size: int) -> tuple[int, int]:
-    """function to return a tuple of size two containing a start index and an end index """
+    """function to return a tuple of size two containing
+    a start index and an end index """
     return ((page - 1) * page_size, ((page - 1) * page_size) + page_size)
