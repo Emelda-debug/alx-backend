@@ -10,6 +10,7 @@ class MRUCache(BaseCaching):
     """class `MRUCache` that inherits
        from `BaseCaching` and is a caching system
     """
+
     def __init__(self):
         """ cache Initialization.
         """

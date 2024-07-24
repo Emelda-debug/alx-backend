@@ -16,7 +16,7 @@ class FIFOCache(BaseCaching):
         self.cache_data = OrderedDict()
 
     def put(self, key, item):
-        """assigns `self.cache_data` to the dictionary and 
+        """assigns `self.cache_data` to the dictionary and
           value `item` for key  `key`
         """
 
@@ -32,11 +32,3 @@ class FIFOCache(BaseCaching):
     def get(self, key):
         """return value in `self.cache_data` linked to `key`"""
         return self.cache_data.get(key, None)
-    
-
-
-
-
-
-
-

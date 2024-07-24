@@ -11,6 +11,7 @@ class LFUCache(BaseCaching):
     retrieving items from a dictionary using LFU
      when limit is reached.
     """
+
     def __init__(self):
         """  cache Initialization
         """
@@ -29,12 +30,12 @@ class LFUCache(BaseCaching):
         for x, key_freq in enumerate(self.keys_freq):
             if key_freq[0] == mru_key:
                 mst_rcntly_usd_frqncy = key_freq[1] + 1
-                mst_rcntly_usd_position = i
+                mst_rcntly_usd_position = x
                 break
             elif len(max_positions) == 0:
-                max_positions.append(i)
+                max_positions.append(x)
             elif key_freq[1] < self.keys_freq[max_positions[-1]][1]:
-                max_positions.append(i)
+                max_positions.append(x)
         max_positions.reverse()
         for pos in max_positions:
             if self.keys_freq[pos][1] > mst_rcntly_usd_frqncy:

@@ -10,6 +10,7 @@ class LIFOCache(BaseCaching):
     """Represents object that allows storing and
     retrieval using LIFO of items from a dictionary
     """
+
     def __init__(self):
         """ cache Initializations
         """
